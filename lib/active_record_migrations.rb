@@ -22,6 +22,7 @@ module ActiveRecordMigrations
     ActiveRecord::Base.schema_format = configurations.schema_format
     DatabaseTasks.env = configurations.environment
     DatabaseTasks.seed_loader = configurations.seed_loader
+    puts 'congfig.db_config', configurations.database_configurations
     ActiveRecord::Base.configurations = DatabaseTasks.database_configuration =
       configurations.database_configurations
     DatabaseTasks.current_config = configurations.database_configuration[configurations.environment]
