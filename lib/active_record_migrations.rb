@@ -23,7 +23,7 @@ module ActiveRecordMigrations
     DatabaseTasks.env = configurations.environment
     DatabaseTasks.seed_loader = configurations.seed_loader
     ActiveRecord::Base.configurations = DatabaseTasks.database_configuration =
-      configurations.database_configuration
+      configurations.database_configurations
     DatabaseTasks.current_config = configurations.database_configuration[configurations.environment]
     DatabaseTasks.db_dir = configurations.db_dir
     DatabaseTasks.migrations_paths = configurations.migrations_paths
